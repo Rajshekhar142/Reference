@@ -16,23 +16,25 @@ const DOMAINS: DomainCard[] = [
   {
     slug: "devops",
     title: "DevOps & Infra",
-    description: "Linux, CI/CD pipelines, AWS architecture, and scripting automation.",
+    description:
+      "Linux, CI/CD pipelines, AWS architecture, and scripting automation.",
     icon: "🚀",
     taskCount: 25,
     active: true,
   },
   {
-    slug: "frontend",
-    title: "Frontend Eng",
-    description: "UI components, state management, CSS performance, and micro-apps.",
+    slug: "philosophy",
+    title: "Philosophy and More",
+    description: "from beautiful Quotes to sophisticated books",
     icon: "🎨",
-    taskCount: 0,
-    active: false, // For future expansion
+    taskCount: 15,
+    active: true, // For future expansion
   },
   {
     slug: "backend",
     title: "Backend Systems",
-    description: "API design, database optimization, caching, and system architecture.",
+    description:
+      "API design, database optimization, caching, and system architecture.",
     icon: "⚙️",
     taskCount: 0,
     active: false, // For future expansion
@@ -43,7 +45,6 @@ export default function HubPage() {
   return (
     <main className="min-h-screen bg-slate-900 text-slate-100 p-4 md:p-8 flex flex-col justify-center items-center">
       <div className="max-w-md w-full space-y-6">
-        
         {/* Hub Header */}
         <header className="text-center space-y-2">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xl font-bold mb-2">
@@ -68,8 +69,12 @@ export default function HubPage() {
                 >
                   <span className="text-2xl saturate-0">{domain.icon}</span>
                   <div>
-                    <h2 className="text-base font-bold text-slate-400">{domain.title}</h2>
-                    <p className="text-xs text-slate-500 mt-0.5">{domain.description}</p>
+                    <h2 className="text-base font-bold text-slate-400">
+                      {domain.title}
+                    </h2>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      {domain.description}
+                    </p>
                   </div>
                 </div>
               );
@@ -83,7 +88,7 @@ export default function HubPage() {
               >
                 {/* Glow Accent Effect */}
                 <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 blur-xl pointer-events-none rounded-full group-hover:bg-indigo-500/10 transition-colors" />
-                
+
                 <div className="flex items-start gap-4">
                   <span className="text-2xl p-2 bg-slate-900 rounded-lg border border-slate-700/50 group-hover:border-indigo-500/30 transition-colors">
                     {domain.icon}
@@ -118,7 +123,6 @@ export default function HubPage() {
             v1.0.0 // PWA READY
           </p>
         </footer>
-
       </div>
     </main>
   );
