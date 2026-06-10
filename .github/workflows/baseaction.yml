@@ -28,7 +28,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Fixed: changed from node-index to node-version
+          node-version: '22' # Fixed: changed from node-index to node-version
           cache: 'npm'  
 
       - name: Install Dependencies
